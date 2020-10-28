@@ -13,7 +13,7 @@ const passport = require('passport')
 const Emitter = require('events')
 
 // Database connection
-const url = 'mongodb://localhost/pizza';
+const url = 'mongodb+srv://mrinal-dev-2020:Kolkata1@cluster0.5l5m3.mongodb.net/pizza?retryWrites=true&w=majority';
 mongoose.connect(url, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
 const connection = mongoose.connection;
 connection.once('open', () => {
@@ -33,6 +33,7 @@ const eventEmitter = new Emitter()
 app.set('eventEmitter', eventEmitter)
 
 // Session config
+COOKIE_SECRET = "thisismysecret"
 app.use(session({
     secret: process.env.COOKIE_SECRET,
     resave: false, 
