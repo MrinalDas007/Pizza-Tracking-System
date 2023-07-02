@@ -2,7 +2,7 @@
   "name": "realtime-pizza",
   "version": "1.0.0",
   "description": "This is our relatime pizza app",
-  "main": "index.js",
+  "main": "server.js",
   "author": "Coder's Gyan",
   "scripts": {
     "serve": "node server.js",
